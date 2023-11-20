@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wp6413256"
+        tools:context=".MainActivity"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/Snow_Depth"
+            android:text="Głębokość śniegu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="#B38745FF"/>
+
+    <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.3333"
+            app:layout_constraintTop_toBottomOf="@+id/Snow_Depth" app:layout_constraintStart_toStartOf="parent"
+            android:background="#AD49B3FA">
+        <TextView
+                android:id="@+id/SnowText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="&lt;20cm   "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+        <CheckBox
+                android:id="@+id/SnowBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/SnowText1"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/r2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.3334"
+            app:layout_constraintTop_toBottomOf="@+id/Snow_Depth"
+            android:background="#AD49B3FA" app:layout_constraintStart_toEndOf="@+id/r1"
+    >
+
+        <TextView
+                android:id="@+id/SnowText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20-50 cm"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+        <CheckBox
+                android:id="@+id/SnowBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/SnowText2"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/r3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.333"
+            app:layout_constraintTop_toBottomOf="@+id/Snow_Depth"
+            android:background="#AD49B3FA" app:layout_constraintStart_toEndOf="@+id/r2"
+    >
+
+        <TextView
+                android:id="@+id/SnowText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&gt;50 cm   "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+        <CheckBox
+                android:id="@+id/SnowBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/SnowText3"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/Surface_old"
+            android:text="Powierzchnia starego śniegu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/r2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="#B38745FF"/>
+
+    <RelativeLayout
+            android:id="@+id/Old"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/Surface_old"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:background="#AD49B3FA">
+
+
+        <TextView
+                android:id="@+id/Firn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Firn"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/Surface_old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/Old">
+        <CheckBox
+                android:id="@+id/Firn_Box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintTop_toBottomOf="@+id/Surface_old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/Old2">
+        <TextView
+                android:id="@+id/Wet_Snow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mokry śnieg"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintTop_toBottomOf="@+id/Surface_old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/Old3">
+        <CheckBox
+                android:id="@+id/WetBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/Old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toStartOf="@+id/Old">
+        <TextView
+                android:id="@+id/Settled_Snow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Osiadły śnieg"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/Old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/Old5">
+        <CheckBox
+                android:id="@+id/SettledBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old7"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintTop_toBottomOf="@+id/Old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/Old6">
+        <TextView
+                android:id="@+id/Formations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Formacje lodowe\nLodoszreń"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:textAlignment="center"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/Old8"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintTop_toBottomOf="@+id/Old"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/Old7">
+        <CheckBox
+                android:id="@+id/Formationbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/New_Depth"
+            android:text="Głębokość świeżego śniegu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/Old6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="#B38745FF"
+    />
+
+    <RelativeLayout
+            android:id="@+id/Dof1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/New_Depth"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#AD49B3FA">
+
+        <TextView
+                android:id="@+id/OneCm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sdepthtxt"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+        <EditText
+                android:id="@+id/More"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:inputType="number"
+                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/New_Depth"
+                android:background="#AD49B3FA"
+                app:layout_constraintStart_toEndOf="@+id/Dof1"
+                android:hint="Wpisz wartość"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center" android:textColorHint="#2E2E2E"/>
+
+
+    <TextView
+            android:id="@+id/WindSpeed"
+            android:text="Prędkość wiatru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="#A99964FA"
+            app:layout_constraintTop_toBottomOf="@+id/More"/>
+
+    <RelativeLayout
+            android:id="@+id/ws1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.3333"
+            app:layout_constraintTop_toBottomOf="@+id/WindSpeed" app:layout_constraintStart_toStartOf="parent"
+            android:background="#AD49B3FA">
+        <TextView
+                android:id="@+id/wind1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cisza"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+        <CheckBox
+                android:id="@+id/windbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/wind1"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/ws2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.3334"
+            app:layout_constraintTop_toBottomOf="@+id/WindSpeed"
+            android:background="#AD49B3FA" app:layout_constraintStart_toEndOf="@+id/r1"
+    >
+
+        <TextView
+                android:id="@+id/wind2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_10mps"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+        <CheckBox
+                android:id="@+id/windbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/wind2"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/ws3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.333"
+            app:layout_constraintTop_toBottomOf="@+id/WindSpeed"
+            android:background="#AD49B3FA" app:layout_constraintStart_toEndOf="@+id/r2"
+    >
+
+        <TextView
+                android:id="@+id/wind3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">10 m/s"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
+        <CheckBox
+                android:id="@+id/windbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/wind3"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/Temperature"
+            android:text="Temperatura powietrza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/ws2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="#B38745FF"
+    />
+
+    <RelativeLayout
+            android:id="@+id/AT1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/Temperature"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#AD49B3FA">
+
+        <TextView
+                android:id="@+id/Tmp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="&lt; -10°C"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="@+id/AT1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/AT1">
+
+        <CheckBox
+                android:id="@+id/Tmp1_Box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="@+id/AT1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/AT2">
+
+        <TextView
+                android:id="@+id/Tmp3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-10°C÷-5°C"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="@+id/AT1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/AT3">
+
+        <CheckBox
+                android:id="@+id/Tmp3_Box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/AT2"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+                android:id="@+id/Tmp5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=">-5°C÷0°C"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT6"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/AT2"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/AT5">
+
+        <CheckBox
+                android:id="@+id/Tmp5_Box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT7"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/AT2"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/AT2">
+
+        <TextView
+                android:id="@+id/Tmp7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Więcej"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/AT8"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/AT1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/AT7">
+
+        <CheckBox
+                android:id="@+id/Tmp7_Box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/WindExposure"
+            android:text="Ekspozycja na wiatr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/AT6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="sans-serif"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="#B38745FF"
+    />
+
+    <RelativeLayout
+            android:id="@+id/WEX1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/WindExposure"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#AD49B3FA">
+
+        <TextView
+                android:id="@+id/W1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nawietrzna"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/WEX2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="@+id/WEX1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/WEX1">
+
+        <CheckBox
+                android:id="@+id/W2box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/WEX3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="@+id/WEX1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/WEX2">
+
+        <TextView
+                android:id="@+id/W3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zawietrzna"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/WEX4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="@+id/WEX1"
+            android:background="#AD49B3FA"
+            app:layout_constraintStart_toEndOf="@+id/WEX3">
+
+        <CheckBox
+                android:id="@+id/W4box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:buttonTint="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/EndOfWorld"
+            android:layout_height="22dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/WEX1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#BF9964FA">
+
+
+    </RelativeLayout>
+    <Button
+            android:id="@+id/confirm_button"
+            android:text="Potwierdź"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <RelativeLayout
+            android:id="@+id/result"
+            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/EndOfWorld"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#00FFFFFF">
+
+        <TextView
+                android:id="@+id/resultsumm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            app:backgroundTint="@color/darkgrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/reset"
+            android:textColor="#FFFFFF"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

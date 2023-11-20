@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Avalancheck</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="_10mps"><![CDATA[<10 m/s]]></string>
+    <string name="reset">Reset</string>
+    <string name="sdepthtxt">Ostatnie 3 dni <![CDATA[(<-10°C)]]>\n2 dni (-10°C÷-4°C)\n1 dzień
+        (≥-4°C)
+    </string>
+</resources>
